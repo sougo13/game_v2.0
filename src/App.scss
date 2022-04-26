@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-size: 22px;
+  font-family: cursive;
+}
+
+div{
+  box-sizing: border-box;
+}
+
+.app {
+  display: block;
+  padding: 20px;
+  height: 100vh;
+}
+
+.background{
+  background-image: url('../public/static/MainBG.webp');
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+.footer{
+  background-color: lightgray;
+  padding: 0 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: -1;
+}
