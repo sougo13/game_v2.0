@@ -1,0 +1,81 @@
+.glabels-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 10px;
+  flex-direction: column;
+  color: #4e138a;
+}
+
+.glabels-game-container {
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
+.fairy-block {
+  width: 50%;
+}
+
+.glabels-fairy-img {
+  width: auto;
+  height: 80vh;
+  position: fixed;
+  left: 30px;
+  top: 15vh;
+}
+
+.game-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 40%;
+  flex-direction: column;
+}
+
+.ImageItemBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  height: 100%;
+}
+
+.glabels-img {
+  object-fit: cover;
+  width: 520px;
+  height: 380px;
+  margin: 10px 0;
+  border-radius: 15px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.control-prev {
+  background-color: rgb(204, 150, 235) !important;
+  opacity: 0.5 !important;
+  border-radius: 10px 0 0 10px;
+  height: 100px;
+  margin: auto !important;
+  &:hover{
+    opacity: 1 !important;
+  }
+}
+
+.control-next {
+  background-color: rgb(204, 150, 235) !important;
+  opacity: 0.5 !important;
+  border-radius: 0 10px 10px 0;
+  height: 100px;
+  margin: auto !important;
+  &:hover{
+    opacity: 1 !important;
+  }
+}
