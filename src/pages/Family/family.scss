@@ -1,0 +1,46 @@
+.family-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 10px;
+  flex-direction: column;
+  color: #4e138a;
+}
+
+.family-game-container{
+  display: flex;
+  width: 100%;
+}
+
+.items-column {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.family-item-block {
+  display: flex;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.family-item-img {
+  object-fit: cover;
+  width: 550px;
+  height: 350px;
+  border-radius: 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+  &.active{
+    border: 5px solid #711cc7ab;
+  }
+  &.inactive {
+    opacity: 0.5;
+  }
+}

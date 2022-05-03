@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './MainMenu.scss';
+import './mainMenu.scss';
 
 const MainMenu = () => {
 
@@ -9,19 +9,19 @@ const MainMenu = () => {
   const handleClick = (number: number) => {
     switch (number) {
       case 1:
-        navigate('/game1');
+        navigate('/glabels');
         break;
       case 2:
-        navigate('/game2')
+        navigate('/animalscount')
         break;
       case 3:
-        navigate('/game3')
+        navigate('/tenderly')
         break;
       case 4:
-        navigate('/game4')
+        navigate('/family')
         break;
       case 5:
-        navigate('/game5')
+        navigate('/oneMany')
         break;
     }
   }
