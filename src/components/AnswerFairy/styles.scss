@@ -1,13 +1,18 @@
-.answer-fairy{
+.answer-fairy {
   position: fixed;
   right: 0;
-  bottom: 0;
-  height: 100vh;
-  width: 30vw;
+  bottom: -200px;
   z-index: 100;
+  transition: bottom .2s linear;
+  visibility: hidden;
+
+  &.active {
+    visibility: visible;
+    bottom: 0;
+  }
 }
 
-.answer-fairy-img{
+.answer-fairy-img {
   width: 100%;
   height: auto;
   object-fit: contain;

@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AlertContext } from '../../context/alert/alertContext';
 import './mainMenu.scss';
 
 const MainMenu = () => {
+
+  const { hide } = useContext(AlertContext);
+
+  useEffect(() => {
+    hide();
+  }, [])
 
   const navigate = useNavigate();
 
@@ -66,8 +73,8 @@ const MainMenu = () => {
           Один-одна-одно-одни
         </div>
       </div>
-      <div className='fairy-container'> 
-      <img className='fairy-img' src='./static/main_fairy.webp'/>
+      <div className='fairy-container'>
+        <img className='fairy-img' src='./static/main_fairy.webp' />
       </div>
     </div>
   )

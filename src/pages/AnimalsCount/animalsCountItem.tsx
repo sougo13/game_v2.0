@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { AlertContext } from '../../context/alert/alertContext';
 
 interface AnimalsCountItemProps {
   src: string;
@@ -7,11 +8,16 @@ interface AnimalsCountItemProps {
 
 const AnimalsCountItem: React.FC<AnimalsCountItemProps> = ({ src, count }) => {
 
+  const { show } = useContext(AlertContext);
+
   const [active, setActive] = useState('');
 
   const handleClick = (answer: number) => {
     if (count === answer) {
       setActive('inactive');
+      show(true);
+    } else {
+      show(false);
     }
   }
 

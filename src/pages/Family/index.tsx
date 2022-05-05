@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { AlertContext } from '../../context/alert/alertContext';
 import './family.scss';
 import { children, parents } from './familyData';
 import FamilyItem from './familyItem';
@@ -9,10 +10,18 @@ const Family = () => {
   const [currentChild, setCurrentChild] = useState<number>(0);
   const [checkedItems, setCheckedItems] = useState<number[]>([]);
 
+  const { show } = useContext(AlertContext);
 
   useEffect(() => {
-    if (currentParent !== 0 && currentChild === currentParent) {
-      setCheckedItems([...checkedItems, currentParent])
+    if (currentParent !== 0 && currentChild !== 0) {
+      if (currentChild === currentParent) {
+        setCheckedItems([...checkedItems, currentParent]);
+        setCurrentChild(0);
+        setCurrentParrent(0);
+        show(true);
+      } else {
+        show(false);
+      }
     }
   }, [currentParent, currentChild])
 

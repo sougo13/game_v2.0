@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AlertContext } from '../../context/alert/alertContext';
 import './styles.scss';
 
-interface AnswerFairyProps {
-  ok: boolean
-}
+const AnswerFairy: React.FC = () => {
 
-const AnswerFairy: React.FC<AnswerFairyProps> = ({ ok }) => {
+  const { correct, isShowed } = useContext(AlertContext);
+
   return (
-    <div className='answer-fairy'>
-      <img
-        className='answer-fairy-img'
-        src={`./static/${ok ? 'ok.webp' : 'wrong'}`} />
-    </div>
+    <>
+      <div className={`answer-fairy ${(isShowed && correct) ? 'active' : ''}`}>
+        <img
+          className='answer-fairy-img'
+          src='./static/ok.webp'
+        />
+      </div>
+      <div className={`answer-fairy ${(isShowed && !correct) ? 'active' : ''}`}>
+        <img
+          className='answer-fairy-img'
+          src='./static/wrong.webp'
+        />
+      </div>
+    </>
   )
 }
 
