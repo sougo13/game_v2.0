@@ -10,6 +10,11 @@
     visibility: visible;
     bottom: 0;
   }
+
+  &.left {
+    right: auto;
+    left: 0;
+  }
 }
 
 .answer-fairy-img {

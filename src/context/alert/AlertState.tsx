@@ -12,13 +12,16 @@ const AlertState: React.FC<AlertStateProps> = ({ children }) => {
   const [state, dispatch] = useReducer(alertReducer, defaultValuse);
   const [timer, setTimer] = useState<any>(null);
 
-  const show = (ok: boolean): void => {
+  const show = (ok: boolean, left: boolean = false): void => {
 
     clearTimeout(timer);
 
     dispatch({
       type: AlertActionTypes.SHOW_ALERT,
-      payload: ok
+      payload: {
+        ok,
+        left
+      }
     })
 
     setTimer(setTimeout(() => {

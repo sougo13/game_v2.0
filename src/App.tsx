@@ -1,5 +1,3 @@
-import React from 'react';
-import './app.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainMenu from './pages/MainMenu';
 import Glabels from './pages/Glades';
@@ -10,6 +8,8 @@ import Family from './pages/Family';
 import OneMany from './pages/OneMany';
 import AnswerFairy from './components/AnswerFairy';
 import AlertState from './context/alert/AlertState';
+import FinalPage from './pages/FinalPage';
+import './app.scss';
 
 const App = () => {
 
@@ -27,6 +27,7 @@ const App = () => {
             <Route path="/tenderly" element={<Tenderly />} />
             <Route path="/family" element={<Family />} />
             <Route path="/onemany" element={<OneMany />} />
+            <Route path="/final" element={<FinalPage />} />
           </Routes>
         </BrowserRouter>
       </AlertState>

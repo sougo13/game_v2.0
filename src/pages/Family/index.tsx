@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AlertContext } from '../../context/alert/alertContext';
 import './family.scss';
 import { children, parents } from './familyData';
@@ -9,6 +10,8 @@ const Family = () => {
   const [currentParent, setCurrentParrent] = useState<number>(0);
   const [currentChild, setCurrentChild] = useState<number>(0);
   const [checkedItems, setCheckedItems] = useState<number[]>([]);
+
+  const navigate = useNavigate();
 
   const { show } = useContext(AlertContext);
 
@@ -22,6 +25,10 @@ const Family = () => {
       } else {
         show(false);
       }
+    }
+
+    if(checkedItems.length === parents.length){
+      navigate('/final');
     }
   }, [currentParent, currentChild])
 

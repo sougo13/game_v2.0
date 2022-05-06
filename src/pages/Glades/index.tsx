@@ -1,4 +1,3 @@
-import React from 'react';
 import { glabels } from './glabelsData';
 import './glabels.scss';
 import ImageItem from './ImageItem';

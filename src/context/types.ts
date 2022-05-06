@@ -6,13 +6,17 @@ export enum AlertActionTypes {
 export interface IAlertState {
   isShowed: boolean,
   correct: boolean,
-  show: (ok: boolean) => void,
+  left: boolean,
+  show: (ok: boolean, left?: boolean) => void,
   hide: () => void
 }
 
 interface ShowAlertAction {
   type: AlertActionTypes.SHOW_ALERT,
-  payload: boolean
+  payload: {
+    ok: boolean,
+    left: boolean
+  }
 }
 
 interface HideAlertAction {

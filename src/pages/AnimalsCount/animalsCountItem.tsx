@@ -4,9 +4,10 @@ import { AlertContext } from '../../context/alert/alertContext';
 interface AnimalsCountItemProps {
   src: string;
   count: number;
+  inc: () => void;
 }
 
-const AnimalsCountItem: React.FC<AnimalsCountItemProps> = ({ src, count }) => {
+const AnimalsCountItem: React.FC<AnimalsCountItemProps> = ({ src, count, inc }) => {
 
   const { show } = useContext(AlertContext);
 
@@ -15,9 +16,10 @@ const AnimalsCountItem: React.FC<AnimalsCountItemProps> = ({ src, count }) => {
   const handleClick = (answer: number) => {
     if (count === answer) {
       setActive('inactive');
-      show(true);
+      show(true, true);
+      inc();
     } else {
-      show(false);
+      show(false, true);
     }
   }
 
