@@ -52,5 +52,8 @@ module.exports = {
     splitChunks: {
       chunks: 'all',
     },
-  }
+  },
+  stats: {
+    errorDetails: true,
+  },
 }
