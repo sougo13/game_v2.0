@@ -41,7 +41,8 @@ module.exports = {
       },
       {
         test: /\.(webp|ico)/,
-        use: ['file-loader?name=[name].[ext]']
+        use: ['file-loader'],
+        type: 'asset/resource'
       }
     ],
   },
