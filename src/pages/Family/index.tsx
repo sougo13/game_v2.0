@@ -1,11 +1,11 @@
-import { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AlertContext } from '../../context/alert/alertContext';
-import './family.scss';
 import { children, parents } from './familyData';
 import FamilyItem from './familyItem';
+import './family.scss';
 
-const Family = () => {
+const Family: React.FC = () => {
 
   const [currentParent, setCurrentParrent] = useState<number>(0);
   const [currentChild, setCurrentChild] = useState<number>(0);

@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainMenu from './pages/MainMenu';
 import Glabels from './pages/Glades';

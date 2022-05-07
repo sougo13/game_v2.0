@@ -1,9 +1,9 @@
 import React from 'react';
-import './tenderly.scss';
 import { tenderlyImages } from './tenderlyData';
 import TenderlyItem from './TenderlyItem';
+import './tenderly.scss';
 
-const Tenderly = () => {
+const Tenderly: React.FC = () => {
   return (
     <div className='tenderly-page'>
       <h1>Назови ласково</h1>

@@ -1,10 +1,11 @@
+import React from 'react';
 import { glabels } from './glabelsData';
-import './glabels.scss';
 import ImageItem from './ImageItem';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import './glabels.scss';
 
-const Glabels = () => {
+const Glabels: React.FC = () => {
   return (
     <div className='glabels-page'>
       <h1 className='h1-title'>Полянки весенних цветов</h1>

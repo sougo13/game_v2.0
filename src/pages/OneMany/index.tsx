@@ -1,8 +1,9 @@
-import './oneMany.scss';
+import React from 'react';
 import { oneManyItems } from './oneManyData';
 import OneManyItem from './oneManyItem';
+import './oneMany.scss';
 
-const OneMany = () => {
+const OneMany: React.FC = () => {
 
   return (
     <div className='one-many-page'>

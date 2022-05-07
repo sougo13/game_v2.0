@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './styles.scss'
 
-const HomeButton = () => {
+const HomeButton: React.FC = () => {
 
   const navigate = useNavigate();
   const location = useLocation()

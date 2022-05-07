@@ -1,10 +1,10 @@
+import React, { useEffect, useState } from 'react';
 import { animalsCount } from './animalsCountData';
 import AnimalsCountItem from './animalsCountItem';
-import './animalsCount.scss';
-import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './animalsCount.scss';
 
-const AnimalsCount = () => {
+const AnimalsCount: React.FC = () => {
 
   const [count, setCount] = useState<number>(0);
 

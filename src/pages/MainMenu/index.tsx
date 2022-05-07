@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { AlertContext } from '../../context/alert/alertContext';
 import './mainMenu.scss';
 
-const MainMenu = () => {
+const MainMenu: React.FC = () => {
 
   const { hide } = useContext(AlertContext);
 
