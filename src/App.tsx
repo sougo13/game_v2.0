@@ -13,7 +13,7 @@ import FinalPage from './pages/FinalPage';
 import './app.scss';
 
 const App = () => {
-
+  
   return (
     <div className='app'>
       <div className='background' />
