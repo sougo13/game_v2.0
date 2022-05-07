@@ -14,7 +14,8 @@
   "scripts": {
     "start": "react-scripts start",
     "webpack": "webpack",
-    "webpack-server": "webpack-dev-server --open"
+    "webpack-server": "webpack-dev-server --open",
+    "build": "webpack --mode production"
   },
   "browserslist": {
     "production": [

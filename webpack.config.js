@@ -4,7 +4,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require("copy-webpack-plugin")
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: ['./src/index.tsx'],
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -48,4 +48,9 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  }
 }
