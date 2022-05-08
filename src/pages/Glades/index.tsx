@@ -14,7 +14,10 @@ const Glabels: React.FC = () => {
           <img className='glabels-fairy-img' src='./static/glabels/glabels.webp' />
         </div>
         <div className='game-block'>
-          <Carousel showStatus={false}>
+          <Carousel
+            showThumbs={false}
+            showStatus={false}
+          >
             {glabels.map((glabel, i) => <ImageItem key={i} src1={glabel.src1} src2={glabel.src2} text={glabel.text} />)}
           </Carousel>
         </div>
