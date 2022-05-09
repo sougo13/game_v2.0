@@ -6,6 +6,7 @@
   padding: 10px;
   flex-direction: column;
   color: #4e138a;
+  padding-left: 150px;
 }
 
 .family-game-container{
@@ -28,12 +29,13 @@
   width: 100%;
   align-items: center;
   justify-content: center;
+  height: 45vh;
 }
 
 .family-item-img {
   object-fit: cover;
-  width: 550px;
-  height: 350px;
+  width: 80%;
+  height: 100%;
   border-radius: 15px;
   cursor: pointer;
   box-sizing: border-box;

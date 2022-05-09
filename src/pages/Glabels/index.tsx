@@ -18,7 +18,7 @@ const Glabels: React.FC = () => {
             showThumbs={false}
             showStatus={false}
           >
-            {glabels.map((glabel, i) => <ImageItem key={i} src1={glabel.src1} src2={glabel.src2} text={glabel.text} />)}
+            {glabels.map((glabel, i) => <ImageItem key={i} src1={glabel.src1} src2={glabel.src2} />)}
           </Carousel>
         </div>
       </div>

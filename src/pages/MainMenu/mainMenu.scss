@@ -11,6 +11,7 @@
 
 .main-menu-container {
   display: flex;
+  position: relative;
   flex-direction: column;
   width: clamp(200px, 800px, 70%);
   height: clamp(200px, 800px, 55%);
@@ -81,17 +82,10 @@
   object-fit: cover;
 }
 
-.fairy-container{
-  display: flex;
+.fairy-test-img{
   position: absolute;
-  background-image: url('../../../public/static/main_fairy.webp');
-  background-size: cover;
-  bottom: 20px;
-  right: 100px;
-  z-index: -1;
-}
-
-.fairy-img{
-  height: clamp(300px, 512px, 55vh);
+  left: 100%;
+  bottom: 0;
+  height: 100%;
   width: auto;
 }
