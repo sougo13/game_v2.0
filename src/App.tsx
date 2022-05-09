@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { ComponentType, lazy, LazyExoticComponent, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainMenu from './pages/MainMenu';
-import Glabels from './pages/Glades';
+import Glabels from './pages/Glabels';
 import HomeButton from './components/HomeButton';
 import AnimalsCount from './pages/AnimalsCount';
 import Tenderly from './pages/Tenderly';
@@ -12,8 +12,32 @@ import AlertState from './context/alert/AlertState';
 import FinalPage from './pages/FinalPage';
 import './app.scss';
 
+interface IExtendedLazyExoticComponent extends LazyExoticComponent<ComponentType<any>> {
+  preload?: () => Promise<{ default: ComponentType<any>; }>;
+}
+
+function lazyWithPreload(factory: () => Promise<{ default: ComponentType<any> }>) {
+  const Component: IExtendedLazyExoticComponent = lazy(factory);
+  Component.preload = factory;
+  return Component;
+}
+
 const App = () => {
-  
+
+  useEffect(() => {
+    const Glabels = lazyWithPreload(() => import('./pages/Glabels'));
+    console.log(Glabels.preload )
+    Glabels.preload && Glabels.preload();
+    const Tenderly = lazyWithPreload(() => import('./pages/Tenderly'));
+    Tenderly.preload && Tenderly.preload();
+    const Family = lazyWithPreload(() => import('./pages/Family'));
+    Family.preload && Family.preload();
+    const OneMany = lazyWithPreload(() => import('./pages/OneMany'));
+    OneMany.preload && OneMany.preload();
+    const FinalPage = lazyWithPreload(() => import('./pages/FinalPage'));
+    FinalPage.preload && FinalPage.preload();
+  }, [])
+
   return (
     <div className='app'>
       <div className='background' />
