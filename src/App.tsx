@@ -26,7 +26,6 @@ const App = () => {
 
   useEffect(() => {
     const Glabels = lazyWithPreload(() => import('./pages/Glabels'));
-    console.log(Glabels.preload )
     Glabels.preload && Glabels.preload();
     const Tenderly = lazyWithPreload(() => import('./pages/Tenderly'));
     Tenderly.preload && Tenderly.preload();
