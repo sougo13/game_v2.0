@@ -1,42 +1,42 @@
 export const glabels = [
   {
     text: '',
-    src1: './static/glabels/violets.webp',
-    src2: './static/glabels/violets1.webp'
+    src1: './static/glabels/1.webp',
+    src2: './static/glabels/2.webp'
   },
   {
     text: '',
-    src1: './static/glabels/crocuses.webp',
-    src2: './static/glabels/crocuses1.webp'
+    src1: './static/glabels/3.webp',
+    src2: './static/glabels/4.webp'
   },
   {
     text: '',
-    src1: './static/glabels/daffodils.webp',
-    src2: './static/glabels/daffodils1.webp'
+    src1: './static/glabels/5.webp',
+    src2: './static/glabels/6.webp'
   },
   {
     text: '',
-    src1: './static/glabels/dandelions.webp',
-    src2: './static/glabels/dandelions1.webp'
+    src1: './static/glabels/7.webp',
+    src2: './static/glabels/8.webp'
   },
   {
     text: '',
-    src1: './static/glabels/forgetmenots.webp',
-    src2: './static/glabels/forgetmenots1.webp'
+    src1: './static/glabels/9.webp',
+    src2: './static/glabels/10.webp'
   },
   {
     text: '',
-    src1: './static/glabels/lilies.webp',
-    src2: './static/glabels/lilies1.webp'
+    src1: './static/glabels/11.webp',
+    src2: './static/glabels/12.webp'
   },
   {
     text: '',
-    src1: './static/glabels/snowdrops.webp',
-    src2: './static/glabels/snowdrops1.webp'
+    src1: './static/glabels/13.webp',
+    src2: './static/glabels/14.webp'
   },
   {
     text: '',
-    src1: './static/glabels/tulips.webp',
-    src2: './static/glabels/tulips1.webp'
+    src1: './static/glabels/15.webp',
+    src2: './static/glabels/16.webp'
   }
 ]

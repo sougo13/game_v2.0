@@ -19,7 +19,6 @@ interface IExtendedLazyExoticComponent extends LazyExoticComponent<ComponentType
 function lazyWithPreload(factory: () => Promise<{ default: ComponentType<any> }>) {
   const Component: IExtendedLazyExoticComponent = lazy(factory);
   Component.preload = factory;
-  console.log('sfsf')
   return Component;
 }
 
@@ -27,6 +26,7 @@ const App = () => {
 
   useEffect(() => {
     const Glabels = lazyWithPreload(() => import('./pages/Glabels'));
+    console.log(Glabels.preload )
     Glabels.preload && Glabels.preload();
     const Tenderly = lazyWithPreload(() => import('./pages/Tenderly'));
     Tenderly.preload && Tenderly.preload();
