@@ -57,6 +57,7 @@ const MainMenu: React.FC = () => {
         </div>
       </div>
       <div className="main-menu-container">
+      <img className='fairy-test-img' src='./static/main_fairy.webp'/>
         <div onClick={() => handleClick(1)} className='main-menu-item'>
           Полянки весенних цветов
         </div>
@@ -72,9 +73,6 @@ const MainMenu: React.FC = () => {
         <div onClick={() => handleClick(5)} className='main-menu-item'>
           Один-одна-одно-одни
         </div>
-      </div>
-      <div className='fairy-container'>
-        <img className='fairy-img' src='./static/main_fairy.webp' />
       </div>
     </div>
   )

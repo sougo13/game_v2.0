@@ -12,9 +12,29 @@
 .glabels-game-container {
   display: flex;
   align-items: flex-start;
-  height: 90%;
+  height: 100%;
   width: 100%;
 }
+
+.carousel-root{
+  height: 100%;
+}
+
+.carousel{
+  height: 100%;
+}
+
+.carousel .slider-wrapper{
+  height: 100%;
+}
+
+.carousel .slider.animated{
+  height: 100%;
+}
+
+.carousel .slide {
+  height: 100%;
+} 
 
 .glabels-fairy-block {
   width: 50%;
@@ -35,7 +55,6 @@
   justify-content: center;
   height: 100%;
   width: 40%;
-  flex-direction: column;
 }
 
 .ImageItemBlock {
@@ -51,7 +70,7 @@
 .glabels-img {
   object-fit: cover;
   width: clamp(200px, 720px, 90%) !important;
-  height: calc(min(20vw, 40vh));
+  height: 40%;
   margin: 10px 0;
   border-radius: 15px;
 }
