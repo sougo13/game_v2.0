@@ -28,7 +28,7 @@ const MainMenu: React.FC = () => {
         navigate('/family')
         break;
       case 5:
-        navigate('/oneMany')
+        navigate('/onemany')
         break;
     }
   }
